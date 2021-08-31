@@ -1,0 +1,4 @@
+bool active
+bool leader
+---
+bool success

@@ -1,0 +1,187 @@
+<!-- This launch file executes group aggregation algorithm for 2 robots, random walk type - ballistic motion -->
+
+<launch>
+    
+    <!--ENVIRONMENT-->
+    <param name="rbts_num" value="20" />
+    <node pkg='turtlebot3_motion' type="environment.py" name="env" output="screen" />
+
+    <!--ROBOT 0-->
+    <group ns="r0">
+        <arg name="num" value="0"/>
+        <param name="num" value="$(arg num)" />
+        <node pkg="turtlebot3_motion" type="group_aggregation.py" name="r$(arg num)_group_aggregation" output="screen" />
+        <node pkg="turtlebot3_motion" type="ballistic_motion.py" name="r$(arg num)_random_walk" output="screen" />
+        <node pkg="turtlebot3_motion" type="static_group.py" name="r$(arg num)_static" output="screen" />
+    </group>
+    
+    <!--ROBOT 1-->
+    <group ns="r1">
+        <arg name="num" value="1"/>
+        <param name="num" value="$(arg num)" />
+        <node pkg="turtlebot3_motion" type="group_aggregation.py" name="r$(arg num)_group_aggregation" output="screen" />
+        <node pkg="turtlebot3_motion" type="ballistic_motion.py" name="r$(arg num)_random_walk" output="screen" />
+        <node pkg="turtlebot3_motion" type="static_group.py" name="r$(arg num)_static" output="screen" />
+    </group>
+
+    <!--ROBOT 2-->
+    <group ns="r2">
+        <arg name="num" value="2"/>
+        <param name="num" value="$(arg num)" />
+        <node pkg="turtlebot3_motion" type="group_aggregation.py" name="r$(arg num)_group_aggregation" output="screen" />
+        <node pkg="turtlebot3_motion" type="ballistic_motion.py" name="r$(arg num)_random_walk" output="screen" />
+        <node pkg="turtlebot3_motion" type="static_group.py" name="r$(arg num)_static" output="screen" />
+    </group>
+    
+    <!--ROBOT 3-->
+    <group ns="r3">
+        <arg name="num" value="3"/>
+        <param name="num" value="$(arg num)" />
+        <node pkg="turtlebot3_motion" type="group_aggregation.py" name="r$(arg num)_group_aggregation" output="screen" />
+        <node pkg="turtlebot3_motion" type="ballistic_motion.py" name="r$(arg num)_random_walk" output="screen" />
+        <node pkg="turtlebot3_motion" type="static_group.py" name="r$(arg num)_static" output="screen" />
+    </group>
+    
+    <!--ROBOT 4-->
+    <group ns="r4">
+        <arg name="num" value="4"/>
+        <param name="num" value="$(arg num)" />
+        <node pkg="turtlebot3_motion" type="group_aggregation.py" name="r$(arg num)_group_aggregation" output="screen" />
+        <node pkg="turtlebot3_motion" type="ballistic_motion.py" name="r$(arg num)_random_walk" output="screen" />
+        <node pkg="turtlebot3_motion" type="static_group.py" name="r$(arg num)_static" output="screen" />
+    </group>    
+
+    <!--ROBOT 5-->
+    <group ns="r5">
+        <arg name="num" value="5"/>
+        <param name="num" value="$(arg num)" />
+        <node pkg="turtlebot3_motion" type="group_aggregation.py" name="r$(arg num)_group_aggregation" output="screen" />
+        <node pkg="turtlebot3_motion" type="ballistic_motion.py" name="r$(arg num)_random_walk" output="screen" />
+        <node pkg="turtlebot3_motion" type="static_group.py" name="r$(arg num)_static" output="screen" />
+    </group>
+    
+    <!--ROBOT 6-->
+    <group ns="r6">
+        <arg name="num" value="6"/>
+        <param name="num" value="$(arg num)" />
+        <node pkg="turtlebot3_motion" type="group_aggregation.py" name="r$(arg num)_group_aggregation" output="screen" />
+        <node pkg="turtlebot3_motion" type="ballistic_motion.py" name="r$(arg num)_random_walk" output="screen" />
+        <node pkg="turtlebot3_motion" type="static_group.py" name="r$(arg num)_static" output="screen" />
+    </group>
+
+    <!--ROBOT 7-->
+    <group ns="r7">
+        <arg name="num" value="7"/>
+        <param name="num" value="$(arg num)" />
+        <node pkg="turtlebot3_motion" type="group_aggregation.py" name="r$(arg num)_group_aggregation" output="screen" />
+        <node pkg="turtlebot3_motion" type="ballistic_motion.py" name="r$(arg num)_random_walk" output="screen" />
+        <node pkg="turtlebot3_motion" type="static_group.py" name="r$(arg num)_static" output="screen" />
+    </group>
+    
+    <!--ROBOT 8-->
+    <group ns="r8">
+        <arg name="num" value="8"/>
+        <param name="num" value="$(arg num)" />
+        <node pkg="turtlebot3_motion" type="group_aggregation.py" name="r$(arg num)_group_aggregation" output="screen" />
+        <node pkg="turtlebot3_motion" type="ballistic_motion.py" name="r$(arg num)_random_walk" output="screen" />
+        <node pkg="turtlebot3_motion" type="static_group.py" name="r$(arg num)_static" output="screen" />
+    </group>
+    
+    <!--ROBOT 9-->
+    <group ns="r9">
+        <arg name="num" value="9"/>
+        <param name="num" value="$(arg num)" />
+        <node pkg="turtlebot3_motion" type="group_aggregation.py" name="r$(arg num)_group_aggregation" output="screen" />
+        <node pkg="turtlebot3_motion" type="ballistic_motion.py" name="r$(arg num)_random_walk" output="screen" />
+        <node pkg="turtlebot3_motion" type="static_group.py" name="r$(arg num)_static" output="screen" />
+    </group>    
+
+    <!--ROBOT 10-->
+    <group ns="r10">
+        <arg name="num" value="10"/>
+        <param name="num" value="$(arg num)" />
+        <node pkg="turtlebot3_motion" type="group_aggregation.py" name="r$(arg num)_group_aggregation" output="screen" />
+        <node pkg="turtlebot3_motion" type="ballistic_motion.py" name="r$(arg num)_random_walk" output="screen" />
+        <node pkg="turtlebot3_motion" type="static_group.py" name="r$(arg num)_static" output="screen" />
+    </group>
+    
+    <!--ROBOT 11-->
+    <group ns="r11">
+        <arg name="num" value="11"/>
+        <param name="num" value="$(arg num)" />
+        <node pkg="turtlebot3_motion" type="group_aggregation.py" name="r$(arg num)_group_aggregation" output="screen" />
+        <node pkg="turtlebot3_motion" type="ballistic_motion.py" name="r$(arg num)_random_walk" output="screen" />
+        <node pkg="turtlebot3_motion" type="static_group.py" name="r$(arg num)_static" output="screen" />
+    </group>
+
+    <!--ROBOT 12-->
+    <group ns="r12">
+        <arg name="num" value="12"/>
+        <param name="num" value="$(arg num)" />
+        <node pkg="turtlebot3_motion" type="group_aggregation.py" name="r$(arg num)_group_aggregation" output="screen" />
+        <node pkg="turtlebot3_motion" type="ballistic_motion.py" name="r$(arg num)_random_walk" output="screen" />
+        <node pkg="turtlebot3_motion" type="static_group.py" name="r$(arg num)_static" output="screen" />
+    </group>
+    
+    <!--ROBOT 13-->
+    <group ns="r13">
+        <arg name="num" value="13"/>
+        <param name="num" value="$(arg num)" />
+        <node pkg="turtlebot3_motion" type="group_aggregation.py" name="r$(arg num)_group_aggregation" output="screen" />
+        <node pkg="turtlebot3_motion" type="ballistic_motion.py" name="r$(arg num)_random_walk" output="screen" />
+        <node pkg="turtlebot3_motion" type="static_group.py" name="r$(arg num)_static" output="screen" />
+    </group>
+    
+    <!--ROBOT 14-->
+    <group ns="r14">
+        <arg name="num" value="14"/>
+        <param name="num" value="$(arg num)" />
+        <node pkg="turtlebot3_motion" type="group_aggregation.py" name="r$(arg num)_group_aggregation" output="screen" />
+        <node pkg="turtlebot3_motion" type="ballistic_motion.py" name="r$(arg num)_random_walk" output="screen" />
+        <node pkg="turtlebot3_motion" type="static_group.py" name="r$(arg num)_static" output="screen" />
+    </group>    
+
+    <group ns="r15">
+        <arg name="num" value="15"/>
+        <param name="num" value="$(arg num)" />
+        <node pkg="turtlebot3_motion" type="group_aggregation.py" name="r$(arg num)_group_aggregation" output="screen" />
+        <node pkg="turtlebot3_motion" type="ballistic_motion.py" name="r$(arg num)_random_walk" output="screen" />
+        <node pkg="turtlebot3_motion" type="static_group.py" name="r$(arg num)_static" output="screen" />
+    </group>
+    
+    <!--ROBOT 16-->
+    <group ns="r16">
+        <arg name="num" value="16"/>
+        <param name="num" value="$(arg num)" />
+        <node pkg="turtlebot3_motion" type="group_aggregation.py" name="r$(arg num)_group_aggregation" output="screen" />
+        <node pkg="turtlebot3_motion" type="ballistic_motion.py" name="r$(arg num)_random_walk" output="screen" />
+        <node pkg="turtlebot3_motion" type="static_group.py" name="r$(arg num)_static" output="screen" />
+    </group>
+
+    <!--ROBOT 17-->
+    <group ns="r17">
+        <arg name="num" value="17"/>
+        <param name="num" value="$(arg num)" />
+        <node pkg="turtlebot3_motion" type="group_aggregation.py" name="r$(arg num)_group_aggregation" output="screen" />
+        <node pkg="turtlebot3_motion" type="ballistic_motion.py" name="r$(arg num)_random_walk" output="screen" />
+        <node pkg="turtlebot3_motion" type="static_group.py" name="r$(arg num)_static" output="screen" />
+    </group>
+    
+    <!--ROBOT 18-->
+    <group ns="r18">
+        <arg name="num" value="18"/>
+        <param name="num" value="$(arg num)" />
+        <node pkg="turtlebot3_motion" type="group_aggregation.py" name="r$(arg num)_group_aggregation" output="screen" />
+        <node pkg="turtlebot3_motion" type="ballistic_motion.py" name="r$(arg num)_random_walk" output="screen" />
+        <node pkg="turtlebot3_motion" type="static_group.py" name="r$(arg num)_static" output="screen" />
+    </group>
+    
+    <!--ROBOT 19-->
+    <group ns="r19">
+        <arg name="num" value="19"/>
+        <param name="num" value="$(arg num)" />
+        <node pkg="turtlebot3_motion" type="group_aggregation.py" name="r$(arg num)_group_aggregation" output="screen" />
+        <node pkg="turtlebot3_motion" type="ballistic_motion.py" name="r$(arg num)_random_walk" output="screen" />
+        <node pkg="turtlebot3_motion" type="static_group.py" name="r$(arg num)_static" output="screen" />
+    </group>    
+</launch>

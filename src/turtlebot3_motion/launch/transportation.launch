@@ -1,0 +1,22 @@
+<!-- This launch file executes transporting the resource algorithm -->
+
+<launch>
+
+    <!--ENVIRONMENT-->
+    <node pkg='turtlebot3_motion' type="transportation_environment.py" name="env" output="screen" />
+
+    <!--ROBOT 0-->
+    <group ns="r0">
+        <arg name="num" value="0"/>
+        <param name="num" value="$(arg num)"/>
+        <node pkg="turtlebot3_motion" type="transportation.py" name="r$(arg num)_transportation" output="screen" />
+    </group>
+
+    <!--ROBOT 1-->
+    <group ns="r1">
+        <arg name="num" value="1"/>
+        <param name="num" value="$(arg num)"/>
+        <node pkg="turtlebot3_motion" type="transportation.py" name="r$(arg num)_transportation" output="screen" />
+    </group>
+
+</launch>

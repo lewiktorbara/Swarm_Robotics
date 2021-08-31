@@ -1,0 +1,36 @@
+include "turtlebot.inc"
+
+name            "5rbts"
+interval_sim    10
+resolution      0.02
+threads         1
+
+window
+(
+    size    [ 500 500 ]
+    center  [ 0 0 ]
+    rotate  [ 0 0 ]
+    scale   10
+
+    # GUI options
+    show_data 0
+    show_flags 0
+    show_blocks 1
+    show_clock 0
+    show_clock_interval 100
+    show_footprints 0
+    show_grid 1
+    show_trailarrows 0
+    show_trailrise 0
+    show_trailfast 0
+    show_occupancy 0
+    show_tree 1
+    pcam_on 0
+    screenshots 1
+)
+
+turtlebot( pose [ 0.0 0.0 0 0 ] name "r00" color "red")
+turtlebot( pose [ 5.0 5.0 0 0 ] name "r01" color "red")
+turtlebot( pose [ -5.0 5.0 0 0 ] name "r02" color "red")
+turtlebot( pose [ 5.0 -5.0 0 0 ] name "r03" color "red")
+turtlebot( pose [ -5.0 -5.0 0 0 ] name "r04" color "red")

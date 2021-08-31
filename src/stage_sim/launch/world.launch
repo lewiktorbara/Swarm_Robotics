@@ -1,0 +1,10 @@
+<launch>
+
+  <!-- world file path-->
+  <arg name="world" default=" $(find stage_sim)/worlds/10x10_10rbts_paired.world" />
+
+  <param name="/use_sim_time" value="true"/>
+
+  <node pkg="stage_ros" type="stageros" name="stageros" args="$(arg world)" />
+
+</launch>

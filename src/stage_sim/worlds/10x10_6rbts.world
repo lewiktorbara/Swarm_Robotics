@@ -1,0 +1,67 @@
+include "turtlebot.inc"
+include "box.inc"
+
+name            "100rbts"
+interval_sim    10
+resolution      0.02
+threads         1
+
+define floorplan model
+(
+  # sombre, sensible, artistic
+  color "gray30"
+
+  # most maps will need a bounding box
+  boundary 1
+
+  gui_nose 0
+  gui_grid 0
+  gui_outline 0
+  gripper_return 0
+  fiducial_return 0
+  laser_return 1
+)
+
+window
+(
+    size    [ 10 10 ]
+    center  [ 0 0 ]
+    rotate  [ 0 0 ]
+    scale   10
+
+    # GUI options
+    show_data 0
+    show_flags 0
+    show_blocks 1
+    show_clock 0
+    show_clock_interval 100
+    show_footprints 0
+    show_grid 1
+    show_trailarrows 0
+    show_trailrise 0
+    show_trailfast 0
+    show_occupancy 0
+    show_tree 1
+    pcam_on 0
+    screenshots 1
+)
+
+floorplan
+(
+  name "swarm"
+  bitmap "./swarm.png"
+  size [ 10.0 10.0 2.0 ]
+  pose [  0.0  0.0 0.0 0.0 ]
+)
+
+
+turtlebot( pose [ -3.0 0.0 0 0 ] name "r00" color "red")
+turtlebot( pose [ 3.0 0.0 0 0 ] name "r01" color "red")
+turtlebot( pose [ 0.0 3.0 0 0 ] name "r02" color "red")
+turtlebot( pose [ 0.0 -3.0 0 0 ] name "r03" color "red")
+turtlebot( pose [ 3.0 3.0 0 0 ] name "r04" color "red")
+turtlebot( pose [ -3.0 -3.0 0 0 ] name "r05" color "red")
+
+#box( pose [0.0 0.0 1 0] name "box01")
+#box( pose [1.5 1.5 1 0] name "box02")
+#box( pose [-1.5 -1.5 1 0] name "box03")

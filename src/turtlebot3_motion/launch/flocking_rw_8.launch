@@ -1,0 +1,130 @@
+<!-- This launch file executes flocking algorithm for 8 robots, random walk type - alternating walk -->
+
+<launch>
+
+    <arg name="x" value="0"/>
+    <arg name="y" value="5"/>
+    <arg name="r_num" value="8"/>
+
+    <!--ENVIRONMENT-->
+    <param name="rbts_num" value="$(arg r_num)" />
+    <node pkg='turtlebot3_motion' type="environment_flocking.py" name="env" output="screen" />
+
+    <!--ROBOT 0-->
+    <group ns="r0">
+        <arg name="num" value="0"/>
+        <param name="num" value="$(arg num)"/>
+        <param name="n_num" value="1" />
+        <param name="des_pos_x" value="$(arg x)"/>
+        <param name="des_pos_y" value="$(arg y)"/>
+        <param name="rbts_num" value="$(arg r_num)" />
+        <node pkg="turtlebot3_motion" type="flocking.py" name="r$(arg num)_flocking" output="screen" />
+        <node pkg="turtlebot3_motion" type="flocking_go_to_point.py" name="r$(arg num)_flocking_go_to_point" output="screen" />
+        <node pkg="turtlebot3_motion" type="follow_the_wall.py" name="r$(arg num)_follow_the_wall" output="screen" />
+        <node pkg="turtlebot3_motion" type="random_walks_group.py" name="r$(arg num)_random_walk" output="screen" />
+
+    </group>
+    
+    <!--ROBOT 1-->
+    <group ns="r1">
+        <arg name="num" value="1"/>
+        <param name="num" value="$(arg num)" />
+        <param name="n_num" value="0"/>
+        <param name="des_pos_x" value="$(arg x)"/>
+        <param name="des_pos_y" value="$(arg y)"/>
+        <param name="rbts_num" value="$(arg r_num)" />
+        <node pkg="turtlebot3_motion" type="flocking.py" name="r$(arg num)_flocking" output="screen" />
+        <node pkg="turtlebot3_motion" type="flocking_go_to_point.py" name="r$(arg num)_flocking_go_to_point" output="screen" />
+        <node pkg="turtlebot3_motion" type="follow_the_wall.py" name="r$(arg num)_follow_the_wall" output="screen" />
+        <node pkg="turtlebot3_motion" type="random_walks_group.py" name="r$(arg num)_random_walk" output="screen" />
+    </group>
+
+    <!--ROBOT 2-->
+    <group ns="r2">
+        <arg name="num" value="2"/>
+        <param name="num" value="$(arg num)"/>
+        <param name="n_num" value="3" />
+        <param name="des_pos_x" value="$(arg x)"/>
+        <param name="des_pos_y" value="$(arg y)"/>
+        <param name="rbts_num" value="$(arg r_num)" />
+        <node pkg="turtlebot3_motion" type="flocking.py" name="r$(arg num)_flocking" output="screen" />
+        <node pkg="turtlebot3_motion" type="flocking_go_to_point.py" name="r$(arg num)_flocking_go_to_point" output="screen" />
+        <node pkg="turtlebot3_motion" type="follow_the_wall.py" name="r$(arg num)_follow_the_wall" output="screen" />
+        <node pkg="turtlebot3_motion" type="random_walks_group.py" name="r$(arg num)_random_walk" output="screen" />
+
+    </group>
+    
+    <!--ROBOT 3-->
+    <group ns="r3">
+        <arg name="num" value="3"/>
+        <param name="num" value="$(arg num)" />
+        <param name="n_num" value="2"/>
+        <param name="des_pos_x" value="$(arg x)"/>
+        <param name="des_pos_y" value="$(arg y)"/>
+        <param name="rbts_num" value="$(arg r_num)" />
+        <node pkg="turtlebot3_motion" type="flocking.py" name="r$(arg num)_flocking" output="screen" />
+        <node pkg="turtlebot3_motion" type="flocking_go_to_point.py" name="r$(arg num)_flocking_go_to_point" output="screen" />
+        <node pkg="turtlebot3_motion" type="follow_the_wall.py" name="r$(arg num)_follow_the_wall" output="screen" />
+        <node pkg="turtlebot3_motion" type="random_walks_group.py" name="r$(arg num)_random_walk" output="screen" />
+    </group>
+
+    <!--ROBOT 4-->
+    <group ns="r4">
+        <arg name="num" value="4"/>
+        <param name="num" value="$(arg num)"/>
+        <param name="n_num" value="5" />
+        <param name="des_pos_x" value="$(arg x)"/>
+        <param name="des_pos_y" value="$(arg y)"/>
+        <param name="rbts_num" value="$(arg r_num)" />
+        <node pkg="turtlebot3_motion" type="flocking.py" name="r$(arg num)_flocking" output="screen" />
+        <node pkg="turtlebot3_motion" type="flocking_go_to_point.py" name="r$(arg num)_flocking_go_to_point" output="screen" />
+        <node pkg="turtlebot3_motion" type="follow_the_wall.py" name="r$(arg num)_follow_the_wall" output="screen" />
+        <node pkg="turtlebot3_motion" type="random_walks_group.py" name="r$(arg num)_random_walk" output="screen" />
+
+    </group>
+    
+    <!--ROBOT 5-->
+    <group ns="r5">
+        <arg name="num" value="5"/>
+        <param name="num" value="$(arg num)" />
+        <param name="n_num" value="4"/>
+        <param name="des_pos_x" value="$(arg x)"/>
+        <param name="des_pos_y" value="$(arg y)"/>
+        <param name="rbts_num" value="$(arg r_num)" />
+        <node pkg="turtlebot3_motion" type="flocking.py" name="r$(arg num)_flocking" output="screen" />
+        <node pkg="turtlebot3_motion" type="flocking_go_to_point.py" name="r$(arg num)_flocking_go_to_point" output="screen" />
+        <node pkg="turtlebot3_motion" type="follow_the_wall.py" name="r$(arg num)_follow_the_wall" output="screen" />
+        <node pkg="turtlebot3_motion" type="random_walks_group.py" name="r$(arg num)_random_walk" output="screen" />
+    </group>
+
+    <!--ROBOT 6-->
+    <group ns="r6">
+        <arg name="num" value="6"/>
+        <param name="num" value="$(arg num)"/>
+        <param name="n_num" value="7" />
+        <param name="des_pos_x" value="$(arg x)"/>
+        <param name="des_pos_y" value="$(arg y)"/>
+        <param name="rbts_num" value="$(arg r_num)" />
+        <node pkg="turtlebot3_motion" type="flocking.py" name="r$(arg num)_flocking" output="screen" />
+        <node pkg="turtlebot3_motion" type="flocking_go_to_point.py" name="r$(arg num)_flocking_go_to_point" output="screen" />
+        <node pkg="turtlebot3_motion" type="follow_the_wall.py" name="r$(arg num)_follow_the_wall" output="screen" />
+        <node pkg="turtlebot3_motion" type="random_walks_group.py" name="r$(arg num)_random_walk" output="screen" />
+
+    </group>
+    
+    <!--ROBOT 7-->
+    <group ns="r7">
+        <arg name="num" value="7"/>
+        <param name="num" value="$(arg num)" />
+        <param name="n_num" value="6"/>
+        <param name="des_pos_x" value="$(arg x)"/>
+        <param name="des_pos_y" value="$(arg y)"/>
+        <param name="rbts_num" value="$(arg r_num)" />
+        <node pkg="turtlebot3_motion" type="flocking.py" name="r$(arg num)_flocking" output="screen" />
+        <node pkg="turtlebot3_motion" type="flocking_go_to_point.py" name="r$(arg num)_flocking_go_to_point" output="screen" />
+        <node pkg="turtlebot3_motion" type="follow_the_wall.py" name="r$(arg num)_follow_the_wall" output="screen" />
+        <node pkg="turtlebot3_motion" type="random_walks_group.py" name="r$(arg num)_random_walk" output="screen" />
+    </group>
+
+
+</launch>
